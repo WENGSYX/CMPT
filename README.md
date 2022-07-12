@@ -7,6 +7,7 @@ A Multi-tasking and Multi-stage Chinese Minority Pre-Trained Language Model
     <img src="./image/main.png" width="500"/>
     <br>
 </p>
+
 #### 检查点下载
 
 | 模型简称 | 模型文件大小 | 模型层数 |百度网盘下载 | 
