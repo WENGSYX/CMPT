@@ -8,11 +8,31 @@ A Multi-tasking and Multi-stage Chinese Minority Pre-Trained Language Model
     <br>
 </p>
 
-#### 检查点下载
+### 检查点下载
 
 | 模型简称 | 模型文件大小 | 模型层数 |百度网盘下载 | 
 | :-------: | :---------: | :---------: | :---------: |
 | **CMPT-Large** | **340MB** | **128+128** | **[PyTorch模型（密码1234）](https://pan.baidu.com/s/1YyMC7xHQF5KveGl3_0lylQ?pwd=1234)** |
 
-#### How to use
+### How to use
 
+PyTorch版本包含3个文件：
+```
+pytorch_model.bin        # 模型权重
+config.json              # 模型参数
+sentencepiece.bpe.model  # 词表
+special_tokens_map.json  # 特殊Token标记
+tokenizer_config.json    # tokenizer参数
+```
+
+**CMPT**与BART较为相似，但加入了DeepNorm，因此请使用modeling_cmpt.py加载模型预定义层
+```
+from modeling_cmpt import CMPTForCir
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained('./CMTP')
+model = CMPTForCir.from_pretrained('./CMTP')
+```
+
+#### 预训练
+`pretrain_train.py`
+* 注意: 请安装deepspeed与apex方可开始预训练
