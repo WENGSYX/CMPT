@@ -36,3 +36,23 @@ model = CMPTForCir.from_pretrained('./CMTP')
 #### 预训练
 `pretrain_train.py`
 * 注意: 请安装deepspeed与apex方可开始预训练
+
+## CITY
+```
+@InProceedings{10.1007/978-981-19-7960-6_10,
+author="Li, Bin
+and Weng, Yixuan
+and Sun, Bin
+and Li, Shutao",
+editor="Xiao, Tong
+and Pino, Juan",
+title="A Multi-tasking and Multi-stage Chinese Minority Pre-trained Language Model",
+booktitle="Machine Translation",
+year="2022",
+publisher="Springer Nature Singapore",
+address="Singapore",
+pages="93--105",
+abstract="The existing multi-language generative model is considered as an important part of the multilingual field, which has received extensive attention in recent years. However, due to the scarcity of Chinese Minority corpus, developing a well-designed translation system is still a great challenge. To leverage the current corpus better, we design a pre-training method for the low resource domain, which can help the model better understand low resource text. The motivation is that the Chinese Minority languages have the characteristics of similarity and the adjacency of cultural transmission, and different multilingual translation pairs can provide the pre-trained model with sufficient semantic information. Therefore, we propose the Chinese Minority Pre-Trained (CMPT) language model with multi-tasking and multi-stage strategies to further leverage these low-resource corpora. Specifically, four pre-training tasks and two-stage strategies are adopted during pre-training for better results. Experiments show that our model outperforms the baseline method in Chinese Minority language translation. At the same time, we released the first generative pre-trained language model for the Chinese Minority to support the development of relevant research (All the experimental codes and the pre-trained language model are open-sourced on the website https://github.com/WENGSYX/CMPT).",
+isbn="978-981-19-7960-6"
+}
+```
