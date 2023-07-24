@@ -27,10 +27,10 @@ tokenizer_config.json    # tokenizer参数
 
 **CMPT**与BART较为相似，但加入了DeepNorm，因此请使用modeling_cmpt.py加载模型预定义层
 ```
-from modeling_cmpt import CMPTForCir
+from modeling_cmpt import BartForConditionalGeneration
 from transformers import AutoTokenizer
 tokenizer = AutoTokenizer.from_pretrained('./CMTP')
-model = CMPTForCir.from_pretrained('./CMTP')
+model = BartForConditionalGeneration.from_pretrained('./CMTP')
 ```
 
 #### 预训练
